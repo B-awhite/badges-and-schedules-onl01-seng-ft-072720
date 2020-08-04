@@ -3,15 +3,12 @@ def badge_maker(name)
 end  
 
 def batch_badge_creator(names)
-  
- end
- badge_messages
+  name.map { |name| badge_maker(name) }
 end  
 
-def assign_rooms(attendees)
-  rooms = []
-  room_num = 1
-  attendees.each_with_index do |name, index|
+def assign_rooms(speakers)
+  new_arr = []
+  speakers.each_with_index do |name, index|
   return ["Hello, #{name}! You'll be assigned to room #{index+1}!"]
  end
  
